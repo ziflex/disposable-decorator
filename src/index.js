@@ -1,6 +1,6 @@
 const TEMPLATE = 'Object is disposed';
 
-export default function create(name, fn) {
+module.exports = function create(name, fn) {
     if (name === 'constructor' || name === 'isDisposed') {
         return fn;
     }
@@ -16,4 +16,4 @@ export default function create(name, fn) {
 
         return fn.apply(this, arguments);
     };
-}
+};

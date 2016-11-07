@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-expressions, import/no-extraneous-dependencies */
+/* eslint-disable global-require, no-unused-expressions, import/no-extraneous-dependencies */
 import { expect } from 'chai';
-import sinon from 'sinon';
 import forEach from 'lodash.foreach';
 import keys from 'lodash.keys';
 import Decorator from '../src/index';
@@ -8,7 +7,7 @@ import Decorator from '../src/index';
 let Disposable = null;
 
 beforeEach(() => {
-    Disposable = function () {
+    Disposable = function DisposableClass() {
         this._isDisposed = false;
     };
 
@@ -94,4 +93,10 @@ it('should create decorator for "dispose"', () => {
     expect(() => {
         instance.dispose();
     }).to.throw(Error);
+});
+
+it('should be exported as "commonjs" module', () => {
+    const decorator = require('../src/index');
+
+    expect(typeof decorator === 'function').to.be.true;
 });

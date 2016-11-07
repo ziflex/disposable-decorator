@@ -1,6 +1,6 @@
 {
   "name": "disposable-decorator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Decorates type methods in order to make disposable assertion",
   "main": "lib/index.js",
   "scripts": {
@@ -30,7 +30,6 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-eslint": "^6",
-    "babel-plugin-transform-node-env-inline": "^6",
     "babel-preset-es2015": "^6",
     "babel-preset-stage-0": "^6",
     "babel-register": "^6.7.2",

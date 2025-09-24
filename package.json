@@ -1,7 +1,7 @@
 {
   "name": "disposable-decorator",
   "version": "1.0.1",
-  "description": "Decorates type methods in order to make disposable assertion",
+  "description": "A lightweight decorator that wraps object methods to automatically check disposal state before execution",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint -c ./.eslintrc.json src",
